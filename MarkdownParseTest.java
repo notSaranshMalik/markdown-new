@@ -8,6 +8,11 @@ import static org.junit.Assert.*;
 public class MarkdownParseTest {
 
     @Test
+    public void failingTest() {
+        assertEquals(1, 2);
+    }
+
+    @Test
     public void testLinks() throws IOException {
         Path fileName = Path.of("test-file.md");
 	    String contents = Files.readString(fileName);
@@ -38,5 +43,5 @@ public class MarkdownParseTest {
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         assertEquals(List.of("https://something.com", "some-page.html"), links);
     }
-    
+
 }
