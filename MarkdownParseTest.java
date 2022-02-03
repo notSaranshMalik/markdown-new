@@ -38,4 +38,5 @@ public class MarkdownParseTest {
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         assertEquals(List.of("https://something.com", "some-page.html"), links);
     }
+    
 }
